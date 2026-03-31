@@ -24,7 +24,7 @@ export default function GrowthPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-28">
+    <div className="min-h-screen bg-gray-50 pb-24">
       {/* Header */}
       <div className="flex items-center gap-3 px-5 pt-6 pb-4">
         <div className="w-10 h-10 rounded-full bg-pink-200 flex items-center justify-center text-lg">
@@ -140,15 +140,6 @@ export default function GrowthPage() {
           </div>
         </div>
 
-        {/* Add Growth Record Button */}
-        <button
-          onClick={() => navigate('/growth/add')}
-          className="w-full flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3.5 rounded-2xl shadow-sm transition-colors"
-        >
-          <Plus size={20} />
-          Thêm kỷ lục tăng trưởng
-        </button>
-
         {/* Info Card */}
         <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4">
           <p className="text-sm text-blue-800 leading-relaxed">
@@ -156,6 +147,17 @@ export default function GrowthPage() {
             ăn dặm đầu đời của bé.
           </p>
         </div>
+      </div>
+
+      {/* Fixed Bottom Add Button */}
+      <div className="fixed bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[430px] px-4 z-50">
+        <button
+          onClick={() => navigate('/growth/add')}
+          className="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-semibold py-3.5 rounded-2xl shadow-lg shadow-blue-200 flex items-center justify-center gap-2 transition-colors"
+        >
+          <Plus size={20} />
+          Thêm kỷ lục tăng trưởng
+        </button>
       </div>
     </div>
   );

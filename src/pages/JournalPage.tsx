@@ -192,13 +192,16 @@ export default function JournalPage() {
         )}
       </div>
 
-      {/* Floating Add Button */}
-      <button
-        onClick={() => navigate('/journal/add')}
-        className="fixed bottom-24 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 shadow-lg shadow-blue-500/30 transition-transform hover:scale-105 active:scale-95"
-      >
-        <Plus className="h-6 w-6 text-white" />
-      </button>
+      {/* Bottom Add Button */}
+      <div className="fixed bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[430px] px-4 z-50">
+        <button
+          onClick={() => navigate('/journal/add')}
+          className="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold py-3.5 rounded-2xl shadow-lg shadow-blue-200 flex items-center justify-center gap-2 transition-colors"
+        >
+          <Plus className="h-5 w-5" />
+          Viết nhật ký mới
+        </button>
+      </div>
     </div>
   );
 }

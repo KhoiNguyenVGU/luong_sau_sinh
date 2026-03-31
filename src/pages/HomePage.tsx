@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useAppData } from '../context/AppContext';
-import { ChevronRight, Plus, Baby, Weight, Ruler } from 'lucide-react';
+import { ChevronRight, Baby, Weight, Ruler } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import { differenceInDays, differenceInMonths, format } from 'date-fns';
 
@@ -266,13 +266,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Floating Add Button */}
-      <button
-        onClick={() => navigate('/journal/add')}
-        className="fixed bottom-24 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#1e40af] shadow-lg shadow-blue-500/30 transition-transform hover:scale-105 active:scale-95"
-      >
-        <Plus className="h-6 w-6 text-white" />
-      </button>
     </div>
   );
 }
