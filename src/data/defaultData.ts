@@ -1,0 +1,90 @@
+import type { AppData } from '../types';
+
+export const defaultData: AppData = {
+  baby: {
+    name: 'Nguyen Gia Han',
+    birthDate: '2025-12-30',
+    gender: 'female',
+  },
+  vaccinations: [
+    {
+      id: '1',
+      name: 'Lao (BCG)',
+      date: '2025-12-31',
+      location: 'Benh vien Phu san',
+      status: 'completed',
+      ageLabel: '1 ngay tuoi',
+      description: 'Vac-xin phong benh lao',
+    },
+    {
+      id: '2',
+      name: 'Viem gan B',
+      date: '2025-12-30',
+      location: 'Benh vien Phu san',
+      status: 'completed',
+      ageLabel: 'So sinh',
+      description: 'Mui so sinh',
+    },
+    {
+      id: '3',
+      name: 'Vac-xin 5 trong 1',
+      date: '2026-04-03',
+      location: 'VNVC Truong Chinh',
+      status: 'upcoming',
+      description: 'Bach hau, Ho ga, Uon van, Hib, Viem gan B',
+    },
+    {
+      id: '4',
+      name: 'Bai liet (Polio)',
+      date: '2026-04-03',
+      location: 'VNVC Truong Chinh',
+      status: 'upcoming',
+      ageLabel: 'Lieu uong lan 1',
+    },
+    {
+      id: '5',
+      name: 'Soi (Measles)',
+      date: '2026-09-30',
+      status: 'future',
+      ageLabel: '9 thang tuoi',
+      description: 'Du kien Thang 09/2026',
+    },
+    {
+      id: '6',
+      name: 'Cum (Flu)',
+      date: '2026-12-30',
+      status: 'future',
+      ageLabel: 'Hang nam',
+      description: 'Dinh ky',
+    },
+  ],
+  growthRecords: [
+    { id: '1', date: '2025-12-30', weight: 3.2, height: 50 },
+    { id: '2', date: '2026-01-30', weight: 4.1, height: 54.5 },
+    { id: '3', date: '2026-02-28', weight: 5.3, height: 59.8 },
+    { id: '4', date: '2026-03-30', weight: 6.2, height: 64.5 },
+  ],
+  journalEntries: [
+    {
+      id: '1',
+      date: '2026-03-31',
+      content: 'Be da biet lat roi! Ca nha vo oa hanh phuc.',
+      category: 'milestone',
+      imageUrl: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=400&h=300&fit=crop',
+    },
+    {
+      id: '2',
+      date: '2026-03-28',
+      content: 'Hom nay be an rat ngoan va bu du cu. Can nang co ve dang tang deu, nhin ma phung phinh yeu qua!',
+      category: 'health',
+      tags: ['Bu me - 8 lan', 'Tam trang tot'],
+    },
+    {
+      id: '3',
+      date: '2026-03-25',
+      content: 'Lan dau tien be ngu xuyen dem ma khong quay khoc. Bo me cung duoc mot giac ngon lanh!',
+      category: 'sleep',
+      tags: ['Tong cong: 10 tieng', 'Bat dau tu: 20:00'],
+    },
+  ],
+};

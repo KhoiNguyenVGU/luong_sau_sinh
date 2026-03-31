@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e40af;
+  --color-primary-light: #3b82f6;
+  --color-primary-bg: #eff6ff;
+  --color-secondary: #f0f9ff;
+  --color-accent: #059669;
+  --color-accent-bg: #ecfdf5;
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fffbeb;
+  --color-danger: #ef4444;
+  --color-danger-bg: #fef2f2;
+  --color-muted: #6b7280;
+  --color-card: #ffffff;
+  --color-surface: #f8fafc;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #1a1a1a;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Phone frame wrapper (desktop only) */
+@media (min-width: 500px) {
+  body {
+    padding: 32px 0;
+  }
+
+  #root {
+    border-radius: 44px;
+    border: 12px solid #1a1a1a;
+    outline: 2px solid #444;
+    box-shadow:
+      0 0 0 1px #555 inset,
+      0 40px 100px rgba(0,0,0,0.6),
+      0 0 0 14px #2a2a2a;
+    overflow: hidden;
+    /* transform creates a new containing block for fixed children — keeps them inside the frame */
+    transform: translateZ(0);
+  }
+}
+
+#root {
+  max-width: 430px;
+  width: 100%;
+  min-height: 100dvh;
+  background: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
